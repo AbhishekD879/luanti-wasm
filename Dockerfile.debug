@@ -36,9 +36,4 @@ RUN set -eux; \
 
 COPY . /luanti-wasm
 
-# Build luanti-wasm
-RUN \
-	   cd /luanti-wasm \
-	&& ls -la \
-        && ./install_emsdk.sh \
-	&& ./build_all.sh
+RUN cd /luanti-wasm && ./install_emsdk.sh
